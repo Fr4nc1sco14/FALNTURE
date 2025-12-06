@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAL' NTURE</title>
+    <link rel="shortcut icon" type="imagex/png" href="assets/images/IMAGE3.jpg" />
+    <!-- Font Awesome (mantive a tua referência) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+  <body>
+    <!-- NAVBAR: adaptada para mobile (hamburger) -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="navbar-items container" id="main-navbar">
+
+        <!-- Left group: hamburger (mobile) OR logo (desktop) -->
+        <div class="navbar-left" style="align-items:center; gap:12px;">
+          <!-- Hamburger (visible on mobile only) -->
+          <button
+            class="hamburger-btn"
+            id="hamburgerBtn"
+            aria-label="Abrir menu"
+            aria-controls="mobileMenu"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+          </button>
+
+          <!-- Logo (kept as link) -->
+          <div class="navbar-items-logo" style="margin-left:6px;">
+            <a href="index.html" aria-label="FAL'NTURE - Página inicial">
+              <img src="assets/images/IMAGE3.jpg" alt="Logo FAL'NTURE" />
+            </a>
+          </div>
+        </div>
+
+        <!-- Center (on mobile logo already in left; center used to keep logo centered) -->
+        <div class="navbar-center" aria-hidden="true" style="pointer-events:none;"></div>
+
+        <!-- Desktop menu (hidden on mobile) -->
+        <ul class="navbar-items-li" role="menubar">
+          <li class="navbar-item" role="none"><a role="menuitem" href="#">CATÁLOGO</a></li>
+          <li class="navbar-item" role="none"><a role="menuitem" href="#">MAIS VENDIDOS</a></li>
+          <li class="navbar-item" role="none"><a role="menuitem" href="#">SOBRE NÓS</a></li>
+          <li class="navbar-item" role="none"><a role="menuitem" href="#">GUIA</a></li>
+        </ul>
+
+        <!-- Right group: icons (heart + bag) + search (hidden on mobile) -->
+        <div class="navbar-right" style="align-items:center;">
+          <div class="navbar-items-icons">
+            <input
+              type="search"
+              name="Navbar-search"
+              placeholder="Procurar ..."
+              aria-label="Pesquisar"
+            />
+            <button class="icon-btn" aria-label="Favoritos">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button class="icon-btn" aria-label="Carrinho">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MOBILE MENU OVERLAY + PANEL -->
+    <div id="mobileOverlay" class="mobile-menu-overlay" tabindex="-1" aria-hidden="true"></div>
+
+    <aside
+      id="mobileMenu"
+      class="mobile-menu"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="mobileMenuHeading"
+      aria-hidden="true"
+    >
+      <div class="mobile-menu-header">
+        <div class="logo" aria-hidden="false">
+          <a href="index.html" style="display:inline-flex; align-items:center; gap:10px; text-decoration:none; color:inherit;">
+            <img src="assets/images/IMAGE3.jpg" alt="Logo FAL'NTURE" style="height:36px; width:auto; display:block;" />
+            <strong style="font-size:0.95rem; letter-spacing:0.04em;">FAL'NTURE</strong>
+          </a>
+        </div>
+
+        <button class="mobile-menu-close" id="mobileCloseBtn" aria-label="Fechar menu">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <nav class="mobile-menu-nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="#" data-mobile-link>CATÁLOGO</a></li>
+          <li><a href="#" data-mobile-link>MAIS VENDIDOS</a></li>
+          <li><a href="#" data-mobile-link>SOBRE NÓS</a></li>
+          <li><a href="#" data-mobile-link>GUIA</a></li>
+        </ul>
+
+        <!-- Extras dentro do menu (opcional): favoritos / carrinho -->
+        <div style="margin-top:18px;">
+          <p style="margin:0 0 8px 0; font-weight:700; color:#222;">Ações</p>
+          <div style="display:flex; gap:10px;">
+            <button class="icon-btn" aria-label="Favoritos (menu)">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button class="icon-btn" aria-label="Carrinho (menu)">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="mobile-menu-footer" aria-hidden="false">
+        <small style="color:#666;">© FAL'NTURE</small>
+      </div>
+    </aside>
+
+    <!-- ========= RESTANTE DO TEU HTML (mantive o conteúdo que enviaste) ========= -->
+    <section class="hero container" role="banner" aria-label="Hero - destaque">
+      <div class="hero-text">
+        <h2>Escolhe a melhor solução de cuidados de pele. Escolhe FAL' NTURE</h2>
+      </div>
+
+      <div class="hero-text-2">
+        <h4>
+          DESCOBRE A MAGIA DO SKINCARE COREANO! OS NOSSOS PRODUTOS UNEM
+          INGREDIENTES TRADICIONAIS A TECNOLOGIA MODERNA PARA DAR À TUA PELE
+          UM BRILHO SAUDÁVEL E RADIANTE.
+        </h4>
+        <button>CATÁLOGO</button>
+      </div>
+    </section>
+
+    <section class="bestSeller container" aria-label="Seção de Bestsellers">
+      <div class="bestSeller-text">
+        <h2>MAIS VENDIDOS</h2>
+
+        <div class="scroll-controls" aria-hidden="false">
+          <button
+            id="scroll-prev"
+            class="scroll-btn"
+            aria-label="Anterior"
+            aria-controls="product-list"
+          >
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <button
+            id="scroll-next"
+            class="scroll-btn"
+            aria-label="Seguinte"
+            aria-controls="product-list"
+          >
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="product-list" role="list" aria-label="Mais vendidos"></div>
+    </section>
+
+    <section class="aboutUs container" aria-label="Sobre nós">
+      <div class="aboutUs-text">
+        <h2 id="about-heading">SOBRE NÓS</h2>
+        <p>
+          Na FAL’NTURE, acreditamos que o skincare é mais do que uma rotina — é
+          um ritual de autocuidado. Inspirando-nos na sabedoria ancestral da
+          beleza coreana e nos mais recentes avanços dermatológicos, criamos
+          fórmulas que combinam ingredientes naturais suaves e eficazes com
+          ciência moderna para revelar uma pele saudável e luminosa.
+        </p>
+        <p>
+          Priorizamos transparência, segurança e sustentabilidade. Cada produto
+          é desenvolvido com ativos selecionados de forma responsável, testes
+          rigorosos e um compromisso com resultados visíveis — sem comprometer o
+          bem-estar da tua pele.
+        </p>
+        <p>
+          Quer estejas a começar uma nova rotina ou a aperfeiçoar a que já tens,
+          a nossa missão é ajudar-te a sentires-te confiante na tua pele.
+          Descobre a FAL’NTURE: skincare autêntico criado para a vida real.
+        </p>
+      </div>
+
+      <div class="aboutUs-card container" aria-labelledby="about-heading">
+        <div class="aboutUs-card-left">
+          <h4>Queres um guia de skincare personalizado?</h4>
+          <p>Não sabes bem como cuidar da tua pele? Nós ajudamos.</p>
+          <p>
+            Responde a 3 perguntas rápidas e recebe uma rotina personalizada,
+            criada especialmente para o teu tipo de pele e preocupações.
+          </p>
+          <p>
+            O nosso guia recomenda os melhores produtos para o teu dia a dia,
+            explica como e quando os usar e partilha dicas práticas para manter
+            a tua pele saudável e radiante.
+          </p>
+          <p>
+            A tua pele é única — a tua rotina também deve ser. Deixa-nos ajudar
+            a criar um ritual de skincare simples, eficaz e agradável.
+          </p>
+          <a
+            href="#quiz"
+            class="btn-cta"
+            aria-label="Começar questionário de skincare personalizado"
+            >Fazer o questionário</a
+          >
+        </div>
+
+        <div
+          class="aboutUs-card-right"
+          role="img"
+          aria-label="Produtos e imagem de skincare"
+        >
+          <img
+            id="imageAboutUs"
+            src="assets/images/HERO.jpg"
+            alt="Produtos de skincare sobre uma superfície de mármore"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="mustPopullar container" aria-label="Seção de Must Popular">
+      <div class="mustPopullar-text">
+        <h2>MARCAS POPULARES</h2>
+        <button class="mustPopullar-btn">CATÁLOGO</button>
+      </div>
+
+      <div id="mustPopullar-list" role="list" aria-label="Produtos populares"></div>
+    </section>
+
+    <section class="NewsLetter container">
+      <div class="NewsLetter-text">
+        <h2>Subscreva a nossa newsletter!</h2>
+        <input type="email" name="NewsLetter-input" placeholder="email">
+        <button>SUBSCREVER</button>
+      </div>
+    </section>
+
+    <footer class="footer container">
+      <div class="footer-column-1">
+        <img src="assets/images/IMAGE3.jpg" alt="Footer Logo">
+      </div>
+      <div class="footer-column-2">
+        <li class="footer-item">CATÁLOGO</li>
+        <li class="footer-item">MAIS VENDIDOS</li>
+        <li class="footer-item">SOBRE NÓS</li>
+      </div>
+      <div class="footer-column-3">
+        <li class="footer-item-social">INSTAGRAM</li>
+        <li class="footer-item-social">FACEBOOK</li>
+        <li class="footer-item-social">X / TWITTER</li>
+      </div>
+      <div class="footer-row">
+        <h4>FAL' NTURE 2025© All rights deserved!</h4>
+        <h4><a href="#">Politica de Privacidade</a></h4>
+        <h4><a href="#">Termos de Serviços</a></h4>
+      </div>
+    </footer>
+
+
+
+
+
+    <script>
+      (function(){
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+        const mobileCloseBtn = document.getElementById('mobileCloseBtn');
+        const mobileLinks = document.querySelectorAll('[data-mobile-link]');
+        let lastFocusedElement = null;
+
+        function openMobileMenu() {
+          // set states
+          mobileMenu.classList.add('open');
+          mobileOverlay.classList.add('open');
+          mobileMenu.setAttribute('aria-hidden', 'false');
+          mobileOverlay.setAttribute('aria-hidden', 'false');
+          hamburgerBtn.setAttribute('aria-expanded', 'true');
+          document.body.classList.add('mobile-menu-open');
+
+          // accessibility: store last focused element and move focus to first focusable in menu
+          lastFocusedElement = document.activeElement;
+          const focusable = mobileMenu.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+          if (focusable.length) focusable[0].focus();
+
+          // small delay ensures overlay visible
+          window.requestAnimationFrame(() => {
+            mobileMenu.classList.add('open');
+          });
+
+          // trap focus: simple implementation
+          document.addEventListener('focus', trapFocus, true);
+          document.addEventListener('keydown', handleKeydown);
+        }
+
+        function closeMobileMenu() {
+          mobileMenu.classList.remove('open');
+          mobileOverlay.classList.remove('open');
+          mobileMenu.setAttribute('aria-hidden', 'true');
+          mobileOverlay.setAttribute('aria-hidden', 'true');
+          hamburgerBtn.setAttribute('aria-expanded', 'false');
+          document.body.classList.remove('mobile-menu-open');
+
+          // restore focus
+          if (lastFocusedElement) lastFocusedElement.focus();
+
+          // remove event listeners
+          document.removeEventListener('focus', trapFocus, true);
+          document.removeEventListener('keydown', handleKeydown);
+        }
+
+        function trapFocus(e) {
+          if (!mobileMenu.classList.contains('open')) return;
+          if (!mobileMenu.contains(e.target)) {
+            e.stopPropagation();
+            // redirect focus to menu
+            const focusable = mobileMenu.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+            if (focusable.length) focusable[0].focus();
+          }
+        }
+
+        function handleKeydown(e) {
+          if (e.key === 'Escape' || e.key === 'Esc') {
+            closeMobileMenu();
+          }
+          // trap tab inside menu
+          if (e.key === 'Tab' && mobileMenu.classList.contains('open')) {
+            const focusable = Array.from(mobileMenu.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])')).filter(el => !el.disabled);
+            if (focusable.length === 0) {
+              e.preventDefault();
+              return;
+            }
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (e.shiftKey && document.activeElement === first) {
+              e.preventDefault();
+              last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+              e.preventDefault();
+              first.focus();
+            }
+          }
+        }
+
+        // open
+        hamburgerBtn.addEventListener('click', function(){
+          const expanded = this.getAttribute('aria-expanded') === 'true';
+          if (!expanded) openMobileMenu();
+          else closeMobileMenu();
+        });
+
+        // close (X)
+        mobileCloseBtn.addEventListener('click', function(){
+          closeMobileMenu();
+        });
+
+        // close when clicking the overlay
+        mobileOverlay.addEventListener('click', function(e){
+          closeMobileMenu();
+        });
+
+        // close when clicking any mobile link
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', function(e){
+            // allow normal navigation but close menu
+            closeMobileMenu();
+          });
+        });
+
+        // ensure responsive behavior: if window resizes >1000 and menu open, close it
+        window.addEventListener('resize', function(){
+          if (window.innerWidth > 1000 && mobileMenu.classList.contains('open')) {
+            closeMobileMenu();
+          }
+        });
+
+
+        // put aria-hidden initial states
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        mobileOverlay.setAttribute('aria-hidden', 'true');
+      })();
+    </script>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
