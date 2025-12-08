@@ -313,11 +313,12 @@ body{
 .aboutUs-text h2{ margin-top: 0; margin-bottom: 0.75rem; letter-spacing: 0.04em; }
 .aboutUs-text p{ margin: 0.5rem 0; color: #333; font-size: 0.98rem; }
 .aboutUs-card{ display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem; align-items: stretch; padding: 0; }
-.aboutUs-card-left{ background: #fff; padding: 1.25rem; border-radius: 1rem; border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 6px 18px rgba(20,20,30,0.04); }
+.aboutUs-card-left{ background: #fff; padding: 1.25rem; border-radius: 1rem; border: 1px solid #6D9CCC; box-shadow: 0 6px 18px rgba(20,20,30,0.04); }
 .aboutUs-card-left h4{ margin-top: 0; margin-bottom: 0.5rem; }
 .btn-cta{ display: inline-block; width: 100%; margin-top: 2.5rem; padding: 0.6rem 1rem; border-radius: 25rem; text-decoration: none; border: 1px solid black; color: #000; font-weight: 600; text-align: center; }
+.btn-cta:hover{ transform: translateY(-3px); background: #000;color: #fff; box-shadow: 0 10px 28px rgba(0,0,0,0.18);}
 .aboutUs-card-right{ border-radius: 1rem; overflow: hidden; min-height: 220px; display: flex; align-items: stretch; }
-.aboutUs-card-right img{ width: 100%; height: 350px; object-fit: cover; display: block; }
+.aboutUs-card-right img{ width: 100%; height: 420px; object-fit: cover; display: block; }
 
 /* Stack aboutUs-card on smaller screens */
 @media (max-width: 900px) {
@@ -325,13 +326,161 @@ body{
   .aboutUs-card-right img { height: 260px; }
 }
 
+
+/* ======================================================= */
+/* ================= ABOUT US & CTA ======================= */
+/* ======================================================= */
+
+.WhyChooseUS-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(18px, 2.5vw, 36px);
+  align-items: center;
+  padding: clamp(18px, 2vw, 28px) 0;
+  height: 100%;
+}
+
+/* Media / imagem */
+.WhyChooseUS-media img {
+  width: 100%;
+  height: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 1rem;
+  display: block;
+  box-shadow: 0 10px 30px rgba(17,17,17,0.06);
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+/* Conteúdo textual */
+.WhyChooseUS-content h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.WhyChooseUS-content .why-lead {
+  margin: 0 0 14px 0;
+  color: #333;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+/* Lista de motivos */
+.why-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.why-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.04);
+  box-shadow: 0 6px 18px rgba(20,20,30,0.02);
+}
+
+.why-list i {
+  display: inline-flex;
+  min-width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  background: #f6f6f6;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.why-list strong {
+  display: block;
+  font-size: 0.96rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.why-list span {
+  display: block;
+  font-size: 0.92rem;
+  color: #666;
+  line-height: 1.3;
+}
+
+/* CTA */
+.why-cta {
+  margin-top: 14px;
+}
+
+/* Reusar botão existente mas tornar mais compacto aqui */
+.WhyChooseUS .btn-cta {
+  width: auto;
+  padding: 10px 18px;
+  border-radius: 999px;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  border: 1px solid #111;
+  background: #fff;
+  color: #111;
+  box-shadow: 0 8px 22px rgba(17,17,17,0.08);
+}
+
+/* Focus / hover states */
+.WhyChooseUS .btn-cta:focus-visible,
+.WhyChooseUS .btn-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(17,17,17,0.12);
+  outline: none;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 900px) {
+  .WhyChooseUS-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .WhyChooseUS-media img {
+    max-height: 320px;
+    margin-bottom: 8px;
+  }
+
+  .why-list li {
+    padding: 12px;
+  }
+
+  .WhyChooseUS .btn-cta {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .WhyChooseUS-media img { max-height: 240px; border-radius: 0.75rem; }
+  .why-list i { min-width: 40px; height: 40px; font-size: 1rem; }
+  .WhyChooseUS-content h3 { font-size: 1rem; }
+  .WhyChooseUS-content .why-lead { font-size: 0.95rem; }
+}
+
+
+
 /* ======================================================= */
 /* =================== NEWSLETTER AREA ==================== */
 /* ======================================================= */
 
 .NewsLetter {
   border-radius: 3rem;
-  border: 1px solid black;
+  border: 1px solid #6D9CCC;
   padding: clamp(18px, 3.2vw, 48px);
   margin-top: 4rem;
 }
@@ -380,20 +529,20 @@ body{
 }
 
 .NewsLetter-text button {
+  width: 70%;
   display: inline-block;
   padding: 12px 26px;
   border-radius: 999px;
-  border: none;
-  background: #111;
-  color: #fff;
+  border: 1px solid #000;
+  background: transparent;
+  color: black;
   font-weight: 700;
   cursor: pointer;
   font-size: 0.95rem;
   letter-spacing: 0.04em;
-  box-shadow: 0 8px 24px rgba(17,17,17,0.14);
   transition: transform var(--transition-med) ease, box-shadow var(--transition-med) ease, background var(--transition-med) ease;
 }
-.NewsLetter-text button:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(17,17,17,0.16); background: #000; }
+.NewsLetter-text button:hover { transform: translateY(-3px); background: #000;color: #fff; box-shadow: 0 10px 28px rgba(0,0,0,0.18);}
 .NewsLetter-text button:focus-visible { outline: 3px solid rgba(17,17,17,0.12); border-radius: 999px; }
 
 /* Desktop/tablet: input + button inline */
