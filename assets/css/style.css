@@ -479,6 +479,7 @@ body{
 /* ======================================================= */
 
 .NewsLetter {
+  width: 90%;
   border-radius: 3rem;
   border: 1px solid #6D9CCC;
   padding: clamp(18px, 3.2vw, 48px);
